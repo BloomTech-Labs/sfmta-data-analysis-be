@@ -27,7 +27,7 @@ module.exports = {
     connection: {
       port: 5432,
       user: 'lambdalabs24sfmta',
-      password: 'p-bjWb4DCUeGFHx',
+      password: process.env.PASSWORD,
       database: 'historicalTransitData'
     },
     migrations: {
