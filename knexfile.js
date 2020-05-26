@@ -24,7 +24,12 @@ module.exports = {
 
   production: {
     client: 'pg',
-    connection: process.env.DATABASE_URL,
+    connection: {
+      port: 5432,
+      user: 'lambdalabs24sfmta',
+      password: 'p-bjWb4DCUeGFHx',
+      database: 'historicalTransitData'
+    },
     migrations: {
       directory: './data/migrations'
     },
