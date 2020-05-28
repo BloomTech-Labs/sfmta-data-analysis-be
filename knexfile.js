@@ -3,24 +3,30 @@
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'pg',
     connection: {
-      filename: './data/sfmta.db3'
+      host: process.env.HOST,
+      port: process.env.PORT,
+      user: process.env.USER,
+      password: process.env.PASSWORD,
+      database: process.env.DATABASE
     },
-    useNullAsDefault: true
-  },
-
-  staging: {
-    client: 'sqlite3',
-    connection: {
-      filename: '/data/staging-sfmta.db3'
-    },
-
     migrations: {
       directory: './data/migrations'
     },
-    useNullAsDefault: true
   },
+
+  // staging: {
+  //   client: 'sqlite3',
+  //   connection: {
+  //     filename: '/data/staging-sfmta.db3'
+  //   },
+
+  //   migrations: {
+  //     directory: './data/migrations'
+  //   },
+  //   useNullAsDefault: true
+  // },
 
   production: {
     client: 'pg',
