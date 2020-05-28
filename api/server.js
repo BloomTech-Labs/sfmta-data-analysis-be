@@ -25,4 +25,9 @@ server.get('/checking', (req, res) => {
         })
 })
 
+server.post('/date', (req, res) => {
+    res.status(200).json(req.body)
+
+})
+
 module.exports = server
