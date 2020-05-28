@@ -26,7 +26,9 @@ server.get('/checking', (req, res) => {
 })
 
 server.post('/date', (req, res) => {
-    res.status(200).json(req.body)
+    const date = req.body
+
+    res.status(200).json(date)
 
 })
 
