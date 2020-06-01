@@ -9,27 +9,12 @@ server.use(helmet())
 
 server.use(express.json())
 
-const db = require('./check-model')
+const routeRouter = require('./route-router/routes')
 
 server.get('/', (req, res) => {
     res.status(200).json('hello world')
 })
 
-server.get('/checking', (req, res) => {
-    db.checking()
-        .then(response => {
-            res.status(200).json(response)
-        })
-        .catch(err => {
-            res.status(500).json({ message: err.message })
-        })
-})
-
-server.post('/date', (req, res) => {
-    const date = req.body
-
-    res.status(200).json(date)
-
-})
+server.use('/api/routes', routeRouter)
 
 module.exports = server
