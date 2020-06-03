@@ -16,6 +16,6 @@ server.get('/', (req, res) => {
     res.status(200).json('hello world')
 })
 
-server.use('/api/routes', routeRouter)
+server.use('/api/', routeRouter)
 
 module.exports = server
