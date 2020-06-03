@@ -1,6 +1,6 @@
 # API Documentation
 
-#### 1️⃣ Backend delpoyed at [AWS beanstalk](http://sfmta-test.eba-5ve9ec22.us-east-1.elasticbeanstalk.com/) <br>
+#### 1️⃣ Backend delpoyed at [AWS beanstalk](http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/) <br>
 
 ## 1️⃣ Getting started
 
@@ -26,9 +26,9 @@ To get the server running locally:
 
 | Method | Endpoint                | Access Control | Description                                  |
 | ------ | ----------------------- | -------------- | -------------------------------------------- |
-| GET    | `/api`                  | all users      | Returns the information for a bus route.     |
-| GET    | `/organizatoins/:orgId` | owners         | Modify an existing organization.             |
-| GET    | `/organizations/:orgId` | owners         | Delete an organization.                      |
+| GET    | `/api/routes`           | all users      | Returns the information for a bus route.     |
+| GET    | `/organizatoins/:orgId` | all users      | Modify an existing organization.             |
+| GET    | `/organizations/:orgId` | all users      | Delete an organization.                      |
 
 
 # Data Model

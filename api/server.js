@@ -9,6 +9,7 @@ server.use(helmet())
 
 server.use(express.json())
 
+const db = require('./route-router/route-model')
 const routeRouter = require('./route-router/routes')
 
 server.get('/', (req, res) => {
