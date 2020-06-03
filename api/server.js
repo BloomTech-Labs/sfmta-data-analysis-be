@@ -25,4 +25,11 @@ server.get('/checking', (req, res) => {
         })
 })
 
+server.post('/date', (req, res) => {
+    const date = req.body
+
+    res.status(200).json(date)
+
+})
+
 module.exports = server
