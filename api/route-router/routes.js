@@ -25,6 +25,7 @@ route.post('/route', (req, res) => {
 
 route.get('/route/:id', (req, res) => {
     db.getCoords(req.params.id)
+        .first()
         .then(coords => {
             res.status(200).json(coords)
         })
