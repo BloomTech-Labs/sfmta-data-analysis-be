@@ -14,7 +14,7 @@ route.get('/type', (req, res) => {
 })
 
 route.post('/route', (req, res) => {
-    db.getRoutes({ route_type: req.body })
+    db.getRoutes({ route_type: req.body.route_type })
         .then(routes => {
             res.status(200).json(routes)
         })
