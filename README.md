@@ -24,13 +24,14 @@ To get the server running locally:
 
 #### Organization Routes
 
-| Method | Endpoint                | Access Control | Description                                       |
-| ------ | ----------------------- | -------------- | --------------------------------------------------|
-| GET    | `/api/type`             | all users      | Returns a list of transit types.                  |
-| POST   | `/api/route`            | all users      | Returns a list of routes for a specific type.     |
-| GET    | `/api/route/:id`        | all users      | returns lat and lon of specified route.           |
-| GET    | `/api/report`           | all users      | returns an overall report of all routes           |
-| POST   | `/api/report/type`      | all users      | returns an array of reports for specified type.   |
+| Method | Endpoint                | Access Control | Description                                               |
+| ------ | ----------------------- | -------------- | ----------------------------------------------------------|
+| GET    | `/api/type`             | all users      | Returns a list of transit types.                          |
+| POST   | `/api/route`            | all users      | Returns a list of routes for a specific type.             |
+| GET    | `/api/route/:id`        | all users      | returns lat and lon of specified route.                   |
+| GET    | `/api/report`           | all users      | returns an overall report of all routes                   |
+| POST   | `/api/report/type`      | all users      | returns an array of reports for specified type.           |
+| POST   | `/api/report/date`      | all users      | returns an array of reports for specified type and date   |
 
 
 # Data Model
