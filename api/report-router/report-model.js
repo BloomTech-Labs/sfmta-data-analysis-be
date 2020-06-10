@@ -1,12 +1,12 @@
 const db = require('../../data/dbConfig')
 
 module.exports = {
-    get,
+    getAll,
 }
 
 
 
-function get() {
+function getAll() {
     return db('reports')
         .first()
 }
