@@ -57,7 +57,9 @@ Refer to DataScience repo for database information
 `getCoords(id)` ->returns a list of coordinates for that route id
 
 `getAll()` -> Returns a report of all transits 
-`getByDate(date)` -> returns a report of specified routes for that date
+
+`getByDate(date)` -> returns a report of specified routes for date parameter
+
 <br>
 <br>
 <br>

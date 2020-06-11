@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
     db.getAll()
         .then(data => {
             let report = Array.from(data.report).filter(item => item.route_id === 'All')
-            res.status(200).json(report)
+            res.status(200).json(report[1])
         })
         .catch(err => {
             res.status(500).json(err.message)
