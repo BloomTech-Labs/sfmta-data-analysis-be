@@ -81,7 +81,7 @@ describe('server routes', () => {
         })
 
         it('should return the same route as the model', async () => {
-            const expected = await db.getCoords(1)
+            const expected = await db.getCoords(1).first()
 
             return request(server)
                 .get('/api/route/1')
