@@ -9,7 +9,7 @@ module.exports = {
 
 function getAll() {
     return db('reports')
-        .last()
+        .first()
 }
 
 function getByDate(date) {
