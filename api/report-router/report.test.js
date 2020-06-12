@@ -57,4 +57,15 @@ describe('server', () => {
             expect(expected).toStrictEqual(knexExpected)
         })
     })
+
+    describe('POST /date', () => {
+        it('should return status code 200', () => {
+            return request(server)
+                .post('/api/report/date')
+                .send({ date: '2020-05-23' })
+                .then(res => {
+                    expect(res.status).toBe(200)
+                })
+        })
+    })
 })

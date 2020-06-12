@@ -15,7 +15,5 @@ function getAll() {
 function getByDate(date) {
     return db('reports')
         .where({ date })
-        .first(res => {
-
-        })
+        .first()
 }

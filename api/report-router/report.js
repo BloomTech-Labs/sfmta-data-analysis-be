@@ -27,7 +27,7 @@ router.post('/type', (req, res) => {
 })
 
 router.post('/date', (req, res) => {
-    db.getAll(req.body.date[0])
+    db.getAll(req.body.date)
         .then(data => {
             let report = Array.from(data.report).filter(item => item.route_id === req.body.route_type)
             res.status(200).json(report)
