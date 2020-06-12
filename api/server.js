@@ -4,7 +4,11 @@ const helmet = require('helmet')
 
 const server = express()
 
-server.use(cors())
+const corsOptions = {
+    origin: 'https://www.datadriventransit.org/'
+}
+
+server.use(cors(corsOptions))
 server.use(helmet())
 
 server.use(express.json())
