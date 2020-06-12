@@ -7,13 +7,15 @@ module.exports = {
 
 
 
-function getAll(rid) {
+function getAll() {
     return db('reports')
-        .where({ rid })
+        .first()
 }
 
-function getByDate(date, rid) {
+function getByDate(date) {
     return db('reports')
-        .where({ date: date, rid: rid })
-        .first()
+        .where({ date })
+        .first(res => {
+
+        })
 }
