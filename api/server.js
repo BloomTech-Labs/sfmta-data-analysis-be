@@ -8,7 +8,6 @@ server.use(helmet())
 
 server.use(express.json())
 
-const db = require('./route-router/route-model')
 const routeRouter = require('./route-router/routes')
 const reportRouter = require('./report-router/report')
 
