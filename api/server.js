@@ -10,6 +10,7 @@ server.use(express.json())
 
 const routeRouter = require('./route-router/routes')
 const reportRouter = require('./report-router/report')
+const routeReportRouter = require('./route-report/route-report')
 
 server.get('/', (req, res) => {
     res.status(200).json('hello world')
@@ -17,6 +18,7 @@ server.get('/', (req, res) => {
 
 server.use('/api', routeRouter)
 server.use('/api/report', reportRouter)
+server.use('/api/route-report', routeReportRouter)
 
 
 module.exports = server
