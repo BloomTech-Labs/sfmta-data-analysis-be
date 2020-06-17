@@ -9,6 +9,7 @@ module.exports = {
 
 function getAll() {
     return db('reports')
+        .orderBy('id', 'desc')
         .first()
 }
 
