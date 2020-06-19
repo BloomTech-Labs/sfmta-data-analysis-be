@@ -2,6 +2,7 @@ const router = require('express').Router()
 const db = require('./route-report-model')
 
 router.post('/', (req, res) => {
+    //this route takes the data that is stored in the reducer after the initial get request so the user doesnt always have to specify the date for this one
     db.getByDate(req.body.date)
         .then(data => {
 

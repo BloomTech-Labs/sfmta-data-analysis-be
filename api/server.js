@@ -20,5 +20,6 @@ server.use('/api', routeRouter)
 server.use('/api/report', reportRouter)
 server.use('/api/route-report', routeReportRouter)
 
-
 module.exports = server
+
+//server .cert and .key were something i found on switching over to https but its probably only used locally if you want you can delete them 
