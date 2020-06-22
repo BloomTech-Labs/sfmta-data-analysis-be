@@ -35,9 +35,59 @@ To get the server running locally:
 | POST   | `/api/route-report/`    | all users      | returns an array of reports for specified route and date  |
 
 
-# Data Model
-
-Refer to DataScience repo for database information https://github.com/Lambda-School-Labs/sfmta-data-analysis-ds
+# Report Model
+{
+    id: integer,
+    date: string:timestamp,
+    report: [
+        date: string:timestamp,
+        coverage: percentage with decimals,
+        map_data: {
+            type: `FeatureCollection`,
+            bunches: [
+                type: `Feature`,
+                geometry: {
+                    type: `point`,
+                    coordinates: [
+                        integers with decimals...
+                    ]
+                },
+                properties: {
+                    time: string:timestamp,
+                    stopId: integer in a string
+                }
+            ...]
+        },
+        num_gaps: integer,
+        route_id: string,
+        line_chart: {
+            gaps: [
+                integers...
+            ],
+            times: [
+                00:00-23:50
+            ],
+            bunches: [
+                integers...
+            ]
+        },
+        route_name: string,
+        route_type: bus,
+        num_bunches: integer,
+        route_table: [
+            {
+                coverage: integer with decimal,
+                route_id: string of an integer,
+                route_id: string,
+                route_name: string,
+                overall_health: integer with decimal,
+                gapped_percentage: integer with decimal,
+                bunched_percentage: integer with decimal,
+                on_time_percentage: integer with decimal
+            }...
+        ]...
+    ]
+}
 
 
 
