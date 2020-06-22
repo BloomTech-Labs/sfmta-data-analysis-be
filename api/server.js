@@ -12,6 +12,18 @@ const routeRouter = require('./route-router/routes')
 const reportRouter = require('./report-router/report')
 const routeReportRouter = require('./route-report/route-report')
 
+const db = require('./report-router/report-model')
+
+server.get('/docs', (req, res) => {
+    db.getAll()
+        .then(data => {
+            res.status(200).json(data)
+        })
+        .catch(err => {
+            res.status(500).json(err.message)
+        })
+})
+
 server.get('/', (req, res) => {
     res.status(200).json('hello world')
 })
