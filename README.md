@@ -36,7 +36,7 @@ To get the server running locally:
 
 
 # Report Model
-...
+```
 {
     id: integer,
     date: string:timestamp,
@@ -89,7 +89,7 @@ To get the server running locally:
         ]...
     ]
 }
-...
+```
 
 
 ## 2️⃣ Actions
