@@ -1,6 +1,6 @@
 # API Documentation
 
-#### 1️⃣ Backend delpoyed at [AWS beanstalk](http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/) <br>
+#### 1️⃣ Backend delpoyed at [AWS beanstalk](https://be.datadriventransit.org/) <br>
 
 ## 1️⃣ Getting started
 
@@ -32,21 +32,14 @@ To get the server running locally:
 | GET    | `/api/report`           | all users      | returns an overall report of all routes                   |
 | POST   | `/api/report/type`      | all users      | returns an array of reports for specified type.           |
 | POST   | `/api/report/date`      | all users      | returns an array of reports for specified type and date   |
+| POST   | `/api/route-report/`    | all users      | returns an array of reports for specified route and date  |
 
 
 # Data Model
 
-Refer to DataScience repo for database information
+Refer to DataScience repo for database information https://github.com/Lambda-School-Labs/sfmta-data-analysis-ds
 
-#### 2️⃣ ORGANIZATIONS
 
----
-
-```
-{
-
-}
-```
 
 ## 2️⃣ Actions
 

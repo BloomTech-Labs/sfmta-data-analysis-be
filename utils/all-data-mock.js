@@ -1,3 +1,5 @@
+//some mock data the DS team gave to us to experiment with and lead to the array from method you see in the routers
+
 module.exports = {
     "route": "All",
     "route_name": "All",

@@ -38,7 +38,7 @@ describe('server', () => {
                 .send({ route_type: 'Bus' })
                 .then(res => {
                     expect(res.status).toBe(200)
-                })
+                }, 15000)
         })
 
         it('should return the expected report', async () => {
@@ -55,17 +55,31 @@ describe('server', () => {
             knexExpected[0].route_table = null
 
             expect(expected).toStrictEqual(knexExpected)
-        })
+        }, 15000)
     })
 
     describe('POST /date', () => {
         it('should return status code 200', () => {
             return request(server)
                 .post('/api/report/date')
-                .send({ date: '2020-05-23' })
+                .send({ date: '2020-05-23', route_type: 'Bus' })
                 .then(res => {
                     expect(res.status).toBe(200)
                 })
-        })
+        }, 13000)
+
+        it('should return the expected report', async () => {
+            let expected = await db.getByDate('2020-05-23')
+            expected = Array.from(expected.report).filter(item => item.route_id === 'Bus')
+            expected[0].map_data = null
+            expected[0].route_table = null
+
+            return request(server)
+                .post('/api/report/date')
+                .send({ date: '2020-05-23', route_type: 'Bus' })
+                .then(res => {
+                    expect(res.body).toStrictEqual(expected[0])
+                })
+        }, 14000)
     })
 })
